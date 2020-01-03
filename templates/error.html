@@ -1,0 +1,18 @@
+<!-- Uses base structure -->
+{% extends "base.html" %}
+
+
+{% block body %}
+      <!-- Error message -->
+      <div>
+        <div class="row center">
+          <div class="offset-l4 col l4">
+            <div class="card-panel light-blue darken-3">
+              <span class="white-text" style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: larger;">
+                <div style="font-style: italic;"> {{errorMsg}} <br> <div style="font-weight: 500; font-style: italic;">{{ err2 }}</div> </div>
+              </span>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock %}

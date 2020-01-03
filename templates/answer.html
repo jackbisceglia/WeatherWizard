@@ -1,0 +1,24 @@
+<!-- Same structure as base html -->
+{% extends "base.html" %}
+
+<!-- Materialize UI card is inserted if location is correct -->
+{% block body %}
+    <!-- Returns heading of card-->
+    <div style="text-align: center; padding-bottom: 5px;">
+        <h5 style="font-family: 'Poppins', sans-serif; font-weight: 500; color: #1a1a1a;">Here's the weather in {{ city }}</h1>
+      </div>
+  
+      <!-- Card body with weather info -->
+      <div>
+        <div class="row center">
+          <div class="offset-l4 col l4">
+            <div class="card-panel light-blue darken-3">
+              <span class="white-text" style="font-family: 'Poppins', sans-serif; font-weight: 400; ">
+                <div style="font-style: italic;"> Outlook:</div> <div style="font-weight: 500;">{{sum}}</div> <br> <div style="font-style: italic;"> Temperature:</div> <div style="font-weight: 500;">{{temperature}}°</div> 
+                <br> <div style="font-style: italic;">Precipitation Chance: </div><div style="font-weight: 500;">{{precipitation}}%</div> <br> <div style="font-style: italic;">  Timezone: </div><div style="font-weight: 500;">{{tz}}</div>
+              </span>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock %}

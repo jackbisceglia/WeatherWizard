@@ -1,0 +1,78 @@
+<!-- Skeleton for site -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" href = "main.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" >
+        <title>Weather Wizard</title>
+        <style>
+          .container {
+              width: 80%;
+              margin: 0 auto;
+              padding: 50x;
+              background: #f0e68c;
+          }
+        </style>
+
+        <style type="text/css">
+          .custom {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+          }
+          </style>
+
+          <style>.hero-image {
+            background-color: #e9e9e9; 
+            height: 600px; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+          }</style>
+    </head>
+
+<body background="static\bgimage.jpg" class="hero-image">
+  <!-- NAVBAR -->
+    <nav class="z-depth-2">
+        <div class="nav-wrapper light-blue darken-3">
+          <a href="#" class="brand-logo custom center" style="padding-top: 1px; letter-spacing: 0.03em;">WeatherWizard</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down"></ul>
+        </div>
+      </nav>
+
+      <!-- FORM -->
+      <div class="input-field row col s12 ">
+        <form class="center" method="POST" action="{{url_for('formSubmit')}}">
+              <div class="input-field inline">
+                <input name="cityform" id="Location Info" type="text" class="validate">
+                <label for="email_inline" >eg. Boston</label>
+                <span class="helper-text col s12" data-error="wrong" data-success="right">Enter Your City</span>
+              </div>              
+        </form>
+      </div>
+
+
+    <!-- SPACING -->
+    <div>
+      <div style="padding-top: 5pc;"></div>
+    </div>
+
+    <div>
+      {% block mess %}{% endblock %}
+    </div>
+
+
+    <div>
+      {% block body %}{% endblock %}
+    </div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+</body>
+</html>
